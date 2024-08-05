@@ -1,0 +1,303 @@
+:root{
+    --main-color: #e84242;
+    --black-color: #0e0e0e;
+    --border: 0.1rem solid rgba(255,255,255,0.4);
+    --body-darkMode-color: #2d2d2d; 
+}
+
+*{
+   
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    margin: 0;   /**Sistemi resetlemek için boşluk kalmasın diye yatayda ve dikeyde margin ve padding*/
+    padding: 0; /**Sistemi resetlemek için*/
+    box-sizing: border-box; /**kutularımızı belirli bir kalıba kaymak için*/
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2 ease;
+}
+
+
+/*! base HTML codes */
+
+html{
+    width: 100%;
+    display: flex; /* Flexbox ile yatay hizalama */
+    align-items: center; /* Dikey olarak ortalama */
+    justify-content: space-between; /* Alanı eşit şekilde dağıtma */
+    padding: 10px; /* Header alanına iç boşluk ekleme */
+   font-size: 62.5%; /*1 rem normalde 16 px iken bu kod ile 1 rem 10 px olur*/
+   overflow-x: hidden; /* yatay scroll u gizlemek için*/ 
+   scroll-padding-top: 9rem;
+   scroll-behavior: smooth;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+    color: black;
+   
+}
+
+/*header start*/
+
+
+header {
+    width: 100%;
+    position: relative; /* İsteğe bağlı: pozisyonlandırma için */
+    display: flex; /* Flexbox kullanarak yatay hizalama */
+    align-items: center; /* Dikey olarak ortalama */
+    justify-content: space-between; /* Alanı eşit şekilde dağıtma */
+   
+    height: 78px;
+   background-color: #0e0e0e;
+}
+
+/*Logo Start*/
+.logo img{
+    width: 200px;
+    height: 32.64px;
+    margin-left: 189px;
+  
+    
+}
+/*Logo Start*/
+
+/*nav start*/
+
+
+.separator {
+    color: #DFECF3; /* Ayarlamak istediğin renk */
+    align-items: center; /* Dikey olarak ortalama */
+    height: 25px;
+    font-weight: lighter;
+}
+
+.navbar{
+    flex-grow: 1;
+    width: 100%; /* Ekranın tamamını kaplar */
+    margin-left: 0;
+    padding-left: 10rem;
+    text-align: right;
+}
+
+.navbar ul {
+    list-style: none; /* İşaretleri kaldırır */
+    padding: 0; /* Varsayılan padding'i sıfırlar */
+    margin: 0; /* Varsayılan margin'i sıfırlar */
+    display: flex; /* Yatay hizalamak için flexbox kullanır */
+    justify-content: flex-end;
+    align-items: center; /* Dikey olarak ortalama */
+}
+.navbar ul li {
+    margin: 0 15px; /* Elemanlar arasında yatay boşluk bırakır */
+    /*margin-right: 10px; */ /* Her bir menü öğesi arasına boşluk ekler */
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    padding: 10px; /* İç boşluk */
+    transition: background-color 0.1s; /* Geçiş efekti */
+    border: none; /* Varsayılan border'ı kaldırır */
+}
+
+
+
+nav ul li:nth-child(1) a,  /*Hakkımızda*/
+nav ul li:nth-child(2) a,  /*Sektör Bilgisi*/
+nav ul li:nth-child(3) a,  /*Kurumsal*/
+nav ul li:nth-child(4) a  /*Basın Odası*/
+  { 
+    font-weight: 500;
+    font-size: 16px;
+    color: #1F5D78;
+}
+
+nav ul li:nth-child(5) a, /* Portal Girişi */
+nav ul li:nth-child(6) a { /* Portale Üye Ol */
+    border: 1px solid #1F5D78; /* Oval şeklide border */
+    border-radius: 44px; /* Border köşeleri oval yapmak için */
+    padding: 10px 20px; /* İç boşluk */
+    background-color: transparent; /* Arka plan rengi */
+    margin-right: 5px; /* Sağ tarafta boşluk */
+    height: 44px;
+    width: 155px;
+}
+
+nav ul li:nth-child(5) a{/* Portal Girişi */
+   
+   font-weight: 500;
+    font-size: 16px;
+    color: #1F5D78;
+}
+
+nav ul li:nth-child(6) a{/* Portale Üye Ol */
+    font-weight: 500;
+    font-size: 16px;
+    color: #FBFCFE;
+    background-color: #1F5D78;
+    padding: 12px 25px; /* İç boşluk */
+}
+
+nav ul li:nth-child(7) a{/* Bize Ulaşın */
+   font-weight: bold;
+   font-size: 16px;
+   color: #1F5D78;
+}
+
+ nav ul li:nth-child(8) { /*TR*/
+    font-weight: 500;
+    font-size: 16px;
+    color: #1F5D78;
+    margin-right: 193px;
+
+ }
+
+ nav ul li:nth-child(8), /*TR*/
+ nav ul li:nth-child(5) a, /* Portal Girişi */
+ nav ul li:nth-child(7) a{ /*resim - yazı hizalama*/
+    display: flex; /* Flexbox kullanarak hizalama */
+    align-items: center; /* Dikey olarak ortala */
+ }
+
+.navbar li img,
+ .navbar li a img {
+    width: 20px; /* İkon boyutu */
+    height: 20px; /* İkon boyutu */
+    margin-right: 5px; /* Metin ile ikon arasındaki boşluk */
+}
+
+
+/*nav finish*/
+
+/*header finish*/
+
+/*main start*/
+
+
+/*slider start*/
+
+
+main {
+ 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    
+    width: 100%;
+    height: 50vw; /* 644px yükseklik yerine ekran genişliğinin %50'si kadar yükseklik */
+    max-height: 644px; /* Maksimum yükseklik sınırı */
+    overflow: hidden;
+    display: flex;
+}
+
+main .slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #ccc;
+    color: #fff;
+    height: 644px;
+    transition: transform 0.5s ease-in-out;
+}
+
+main .slide .sliderImg1{
+    display: grid;
+    height: 675px;
+   
+    justify-content:right;
+    margin-left: 700px;
+    z-index: 1000;
+}
+
+/*slider finish*/
+
+
+/*main finish*/
+
+
+
+
+
+
+
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .whyGImg {
+        height: 500px; /* Mobil görünümde yükseklik ayarlama */
+    }
+
+    .ndnG {
+        font-size: 28px; /* Mobilde daha küçük font */
+        margin: 10px 0; /* Dikey boşluğu azalt */
+    }
+
+    .whyGyoder-wrt {
+        margin: 20px auto; /* Üst boşluğu azalt */
+    }
+
+    .wrt-1 p, .wrt-2 p, .wrt-3 p {
+        font-size: 18px; /* Daha küçük yazı boyutu */
+    }
+
+    .prt1, .prt2, .prt3 {
+        flex: 1 1 100%; /* Mobilde tam genişlik */
+    }
+}
+
+@media (max-width: 480px) {
+    .whyGImg {
+        height: 300px; /* Daha küçük yükseklik */
+    }
+
+    .ndnG {
+        font-size: 24px; /* Daha küçük yazı boyutu */
+    }
+
+    .whyGyoder-wrt {
+        margin: 10px auto; /* Daha az üst boşluk */
+    }
+
+    .wrt-1 p, .wrt-2 p, .wrt-3 p {
+        font-size: 16px; /* Yazı boyutunu daha da küçült */
+    }
+}

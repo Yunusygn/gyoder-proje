@@ -1,0 +1,2612 @@
+:root{
+    --darkGreen-color: #1F5D78;
+    --lightGreen-color: #6EC3E9;
+    --black-color: #212225;
+    --border: 0.1rem solid rgba(255,255,255,0.4);
+    --body-darkMode-color: #2d2d2d; 
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+   
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    margin: 0;   /**Sistemi resetlemek için boşluk kalmasın diye yatayda ve dikeyde margin ve padding*/
+    padding: 0; /**Sistemi resetlemek için*/
+    box-sizing: border-box; /**kutularımızı belirli bir kalıba kaymak için*/
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: 0.2 ease;
+}
+
+
+/*! base HTML codes */
+
+html{
+    font-size: 62.5%; /*1 rem normalde 16 px iken bu kod ile 1 rem 10 px olur*/
+    overflow-x: hidden; /* yatay scroll u gizlemek için*/ 
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+   
+}
+
+/*header start*/
+
+
+header {
+    width: 100%;
+    position: relative; /* İsteğe bağlı: pozisyonlandırma için */
+    display: flex; /* Flexbox kullanarak yatay hizalama */
+    align-items: center; /* Dikey olarak ortalama */
+    justify-content: space-between; /* Alanı eşit şekilde dağıtma */
+   height: 78px;
+}
+
+/*Logo Start*/
+.logo img{
+    width: 200px;
+    height: 32.64px;
+    margin-left: 189px;
+  
+    
+}
+/*Logo Start*/
+
+/*nav start*/
+
+
+.separator {
+  
+    color: #DFECF3; /* Ayarlamak istediğin renk */
+    align-items: center; /* Dikey olarak ortalama */
+    height: 25px;
+    font-weight: lighter;
+}
+
+.navbar{
+    flex-grow: 1;
+    width: 100%; /* Ekranın tamamını kaplar */
+    margin-left: 0;
+    padding-left: 10rem;
+    text-align: right;
+}
+
+.navbar ul {
+    list-style: none; /* İşaretleri kaldırır */
+    padding: 0; /* Varsayılan padding'i sıfırlar */
+    margin: 0; /* Varsayılan margin'i sıfırlar */
+    display: flex; /* Yatay hizalamak için flexbox kullanır */
+    justify-content: flex-end;
+    align-items: center; /* Dikey olarak ortalama */
+}
+.navbar ul li {
+    margin: 0 15px; /* Elemanlar arasında yatay boşluk bırakır */
+    /*margin-right: 10px; */ /* Her bir menü öğesi arasına boşluk ekler */
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    padding: 10px; /* İç boşluk */
+    transition: background-color 0.1s; /* Geçiş efekti */
+    border: none; /* Varsayılan border'ı kaldırır */
+}
+
+
+
+nav ul li:nth-child(1) a,  /*Hakkımızda*/
+nav ul li:nth-child(2) a,  /*Sektör Bilgisi*/
+nav ul li:nth-child(3) a,  /*Kurumsal*/
+nav ul li:nth-child(4) a  /*Basın Odası*/
+  { 
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--darkGreen-color);
+}
+
+nav ul li:nth-child(5) a, /* Portal Girişi */
+nav ul li:nth-child(6) a { /* Portale Üye Ol */
+    border: 1px solid var(--darkGreen-color); /* Oval şeklide border */
+    border-radius: 44px; /* Border köşeleri oval yapmak için */
+    padding: 10px 20px; /* İç boşluk */
+    background-color: transparent; /* Arka plan rengi */
+    margin-right: 5px; /* Sağ tarafta boşluk */
+    height: 44px;
+    width: 155px;
+}
+
+nav ul li:nth-child(5) a{/* Portal Girişi */
+   
+   font-weight: 500;
+    font-size: 16px;
+    color: var(--darkGreen-color);
+}
+
+nav ul li:nth-child(6) a{/* Portale Üye Ol */
+    font-weight: 500;
+    font-size: 16px;
+    color: #FBFCFE;
+    background-color: var(--darkGreen-color);
+    padding: 12px 25px; /* İç boşluk */
+}
+
+nav ul li:nth-child(7) a{/* Bize Ulaşın */
+   font-weight: bold;
+   font-size: 16px;
+   color: var(--darkGreen-color);
+}
+
+ nav ul li:nth-child(8) { /*TR*/
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--darkGreen-color);
+    margin-right: 193px;
+
+ }
+
+ nav ul li:nth-child(8), /*TR*/
+ nav ul li:nth-child(5) a, /* Portal Girişi */
+ nav ul li:nth-child(7) a{ /*resim - yazı hizalama*/
+    display: flex; /* Flexbox kullanarak hizalama */
+    align-items: center; /* Dikey olarak ortala */
+ }
+
+.navbar li img,
+ .navbar li a img {
+    width: 20px; /* İkon boyutu */
+    height: 20px; /* İkon boyutu */
+    margin-right: 5px; /* Metin ile ikon arasındaki boşluk */
+}
+
+
+/*nav finish*/
+
+/*header finish*/
+
+/*main start*/
+
+
+/*slider start*/
+
+
+main {
+ 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+
+    width: 100%;
+    height: 50vw; /* 644px yükseklik yerine ekran genişliğinin %50'si kadar yükseklik */
+    max-height: 644px; /* Maksimum yükseklik sınırı */
+    overflow: hidden;
+    display: flex;
+}
+
+main .slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+   position: absolute;
+    height: 644px;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.text-content {
+  
+    margin-bottom: 1.5rem;
+   margin-right: 100rem;
+    color: var(--black-color);
+    max-width: 50%; /* Metin içeriğinin maksimum genişliği */
+    padding-right: 20px; /* Resim ile metin arasındaki boşluk */
+
+    
+}
+
+.text-content .sliderSentence1{
+    width: 723px;
+    height: 117px;
+    font-size: 48px;
+    font-weight: lighter;
+    
+    
+}
+
+.text-content .sliderSentence1Str{
+    height: 117px;
+    width: 723px;
+    font-size: 48px;
+   
+}
+
+.text-content .sliderSentence1Prg{
+    padding-top: 2.5rem;
+    width: 555px;
+    height: 72px;
+    font-weight: 500;
+    font-size: 20px;
+  
+}
+
+.text-content .dvmt{
+    padding-top: 4.5rem;
+    width: 555px;
+    height: 25px;
+    color: var(--darkGreen-color);
+    font-weight: bold;
+    font-size: 20px;
+  
+   
+}
+
+
+.u{
+   
+    border-bottom: 2px solid var(--darkGreen-color);
+    
+}
+
+.sliderImg1{
+    position: absolute; /* Mutlak konumlandırma */
+    display: grid;
+    width: 100%;
+  
+z-index: -1;
+    height: 644px; 
+    
+}
+
+/* Slider İçin Butonlar */
+.slider-btn {
+    margin: 0 53.1px;
+    position: absolute;
+    top: 41%;
+    transform: translateY(-50%);
+    width: 54px; /* Buton boyutu */
+    height: 54px;
+    border-radius: 50%; /* Yuvarlak buton */
+    background-color: #FBFCFE;
+    opacity: 0.5;
+    color:var(--black-color); /* Buton üzerindeki yazı rengi */
+    border: none; /* Kenarlık kaldırma */
+    font-size: 15px; /* Yazı boyutu */
+    cursor: pointer; /* İşaretçi */
+    display: flex; /* İçerik hizalama */
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Butonların slider içeriklerinin üzerinde olması için */
+}
+
+/* Önceki Buton */
+.prev-btn {
+    left: 10px; /* Sol kenardan uzaklık */
+}
+
+/* Sonraki Buton */
+.next-btn {
+    right: 10px; /* Sağ kenardan uzaklık */
+    z-index: 1000;
+}
+
+
+
+/*slider finish*/
+
+
+
+/*GYODER Button Part Start*/
+
+.gyoder-projects {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: -59px;
+    
+}
+
+.project-list {
+ 
+    display: flex; /* Flexbox kullanımı */
+    justify-content: center; /* Yatay ortalama */
+    gap: 70px; /* Butonlar arasında boşluk */
+    flex-wrap: wrap; /* Ekran küçüldüğünde butonlar alt alta dizilir */
+   
+}
+
+
+.project {
+    display: flex; /* Elemanları yan yana yerleştirir */
+    align-items: center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    text-align: center; /* Metni ortalar */
+    width: 289.52px;
+    height: 72.26px;
+    padding: 10px 20px; /* İç boşluk ayarları */
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: #0e0e0e; /* Arka plan rengi */
+    color: white; /* Metin rengi */
+    border-radius: 69px; /* Köşe yuvarlama */
+    border: none; /* Kenarlık yok */
+    font-weight: bold;
+    font-size: 20px; /* Yazı boyutu */
+    cursor: pointer; /* Fare imlecini el yapar */
+}
+
+.gAkademi{
+    display: flex; /* Elemanları yan yana yerleştirir */
+    align-items: center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    background-color: var(--darkGreen-color);
+}
+
+.gGosterge{
+    color: var(--darkGreen-color);
+    background-color: var(--lightGreen-color);
+}
+
+.gProjeler{
+    color: #ffffff;
+    background-color: var(--black-color);
+}
+
+.gEtkinlikler{
+    color: var(--darkGreen-color);
+    background-color: #E9F3F8;
+}
+
+.gEtkinlikler p{
+    margin-top: 0.56rem;
+}
+
+.project .a{/*GYODER Akademi*/
+   width: 37.73px; 
+   height: 38.13px;
+}
+
+.project .g{/*GYODER Gösterge*/
+    width: 35.72px; 
+    height: 32.69px;
+ }
+
+ .project .p{/* GYODER Projeler*/
+    width: 44px; 
+    height: 40px;
+ }
+
+ .project .e{/* GYODER Etkinlikler*/
+    width: 38px; 
+    height: 39px;
+ }
+
+.project .a, /*GYODER Akademi*/
+.project .g, /*GYODER Gösterge*/
+.project .p, /* GYODER Projeler*/
+.project .e /*GYODER Etkinlikler*/
+{
+
+    margin-right: 8px; /* Metin ile ikon arasındaki boşluk */
+}
+
+/*GYODER Button Part Start*/
+
+
+
+/*Vizyonumuz - Misyonumuz Part Start*/
+
+.about{
+    
+    display: flex;
+    background-color: rgba(35, 107, 139, 0.05);
+    padding-left: 183px;
+    margin-right: 7%;
+    margin-top: 1.4rem;
+   gap: 10rem;
+   border-radius: 5px;
+   height: 307px;
+}
+
+
+.mission{
+    margin-top: 5.5rem;
+    margin-right: 211px;
+}
+
+.vision{
+    margin-top: 6rem;
+}
+
+
+
+
+.mission h2, .vision h2{
+    display: flex; /* Flexbox kullan */
+    align-items: center; /* Dikey olarak ortala */
+    color: var(--black-color);
+    font-weight: bold;
+    font-size: 36px;
+   text-transform: none; /* Metnin baş harflerini büyük yapmaz */
+ 
+}
+
+.mission img{
+    margin-right: 1.5rem;
+    width: 70px;
+    height: 70px;
+}
+
+.vision img{
+    margin-right: 1.5rem;
+    width: 61.08px;
+    height: 64px;
+}
+
+
+ .mission p, .vision p{
+      display: inline-block;
+    color: var(--black-color);
+    margin-top: 2rem;
+  
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: none; /* Metnin baş harflerini büyük yapmaz */
+  
+}
+
+.mission p{
+    width: 587px;
+    height: 144px;
+}
+
+.vision p{
+    width: 573px;
+    height: 120px;
+}
+/*Vizyonumuz - Misyonumuz Part Finish*/
+
+
+
+/*Section event  Etkinlik Takvimi start*/
+
+.event-calendar{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Yatayda ortala */
+    margin-top: 8rem;
+    height: 87px;
+    background: linear-gradient(to right, #1F5D78 0% ,  #4F9ABB 100%) ;
+}
+
+.event-calendar h2{
+    color: #E9F3F8;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 1rem;
+}
+
+.event-calendar img{
+    width: 38.57px;
+    height: 39px;
+    
+    margin-top: -0.5rem;
+    margin-right: 1.5rem;
+}
+
+.event-list{
+    background-color: #DFECF3 ;
+    height: 749px;
+}
+
+
+/*Buton part start*/
+.eventCalendarBtn ul{
+    display: flex; /* Öğeleri yatay hizalar */
+    align-items: center;
+    justify-content: center;
+    list-style-type: none; /* Varsayılan liste işaretlerini kaldırır */
+    padding: 0; /* Varsayılan padding'i kaldırır */
+    margin: 0; /* Varsayılan margin'i kaldırır */
+    margin-left: 25rem;
+  
+}
+
+.eventCalendarBtn li{
+    margin-top: 5rem;
+    margin-right: 28px; /* Öğeler arasına boşluk ekler */
+}
+.eventCalendarBtn li.tmnG{
+    display: flex;
+    font-size: 20px;
+    width: 138.9px;
+    height: 24px;
+    margin-left: 5.5rem;
+    color: var(--darkGreen-color) ; 
+    border-bottom: 1.6px solid var(--darkGreen-color);
+}
+
+.eventCalendarBtn li a{
+    display: flex;
+    width: 218.36px;
+    height: 55.3px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 75px;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    padding: 10px 20px; /* İç boşluk ekler */
+    border: 2px solid #6EC3E9; /* Kenarlık rengi */
+   
+    color: var(--darkGreen-color); /* Metin rengi */
+}
+
+.eventCalendarBtn li.active a {
+   
+    background-color: #6EC3E9; /* Aktif öğe arka plan rengi */
+    color: #ffffff; /* Aktif öğe metin rengi */
+}
+
+
+/*Buton part finish*/
+
+
+
+/*Etkinlik Event Posters start*/
+
+.eventPoster{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.event {
+   
+    width: 457.61px;
+    height: 498px;
+   background-color: #E9F3F8;
+   margin-top: 4.6rem;
+   margin-right: 3rem;
+}
+
+.event img{
+    margin-top: 3.4rem;
+    width: 377px;
+    height: 322px;
+}
+
+.imgPoster{
+    
+    display: flex;
+   
+    justify-content: center;
+}
+
+.event p, .event ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.writePoster{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3.65rem;
+    gap: 2rem;
+    margin-top: 1.8rem;
+}
+
+.date{
+    width: 103px;
+    height: 24px;
+    font-weight:500;
+    font-size: 20px;
+    color: var(--darkGreen-color);
+}
+
+.dayTime{
+    width: 114px;
+    height: 17px;
+    font-weight: bold;
+    font-size: 14.6px;
+    color: #6EC3E9;
+    margin-top: 0.35rem;
+}
+
+.eventInfo{
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--black-color);
+}
+
+.event ul{
+    display: flex; /* Öğeleri yatay hizalar */
+    align-items: center;
+    justify-content: center;
+    list-style-type: none; /* Varsayılan liste işaretlerini kaldırır */
+    padding: 0; /* Varsayılan padding'i kaldırır */
+    margin: 0; /* Varsayılan margin'i kaldırır */
+    margin-left: 1.5rem;
+    
+}
+
+.event ul li{
+    margin-top: 1.2rem;
+    margin-right: 28px; /* Öğeler arasına boşluk ekler */
+    border-radius: 42px;
+} 
+
+.event ul li a{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    padding: 10px 20px; /* İç boşluk ekler */ 
+}
+
+.infoBtn{
+    width: 200px;
+    height: 40px;
+  border: 0.75px solid #6EC3E9;
+}
+
+.infoBtn a{
+    color: #6EC3E9;
+}
+
+.kayitBtn{
+    width: 150px;
+    height: 40px;
+    color: #ffffff;
+    background-color: var(--darkGreen-color);
+}
+
+.kayitBtn a{
+ color: #ffffff;
+}
+
+/*Etkinlik Event Posters finish*/
+
+
+
+/*Section event  Etkinlik Takvimi finish*/
+
+
+
+/*Section Eğitim Start*/
+.educationTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Yatayda ortala */
+
+    height: 87px;
+    background: linear-gradient(to right, #1F5D78 0% ,  #4F9ABB 100%) ;
+}
+
+.educationTitle h2{
+    color: #E9F3F8;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 1rem;
+}
+
+.educationTitle img{
+    width: 37.73px;
+    height: 38.13px;
+    
+    margin-top: 0.5rem;
+    margin-right: 1.5rem;
+}
+
+
+
+/*Liste Part Start*/
+.education-list{
+    background-color: #E9F3F8;
+    padding: 2rem 0rem;
+    height: 37rem;
+}
+
+.educationWrt{
+    display: flex;
+    align-items: center;
+    margin-left: 21rem;
+    padding: 2rem 0rem;
+}
+
+.educationWrt img{
+    width: 20px;
+    height: 24.6px;
+    margin-right: 1rem ;
+}
+
+.educationWrt p{
+    margin-top: 0.35rem;
+   font-weight: bold;
+   font-size: 20px;
+   color: #236B8B;
+    
+}
+
+.course-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.22rem;
+    margin-top: 1rem;
+}
+
+.course{
+    width: 259.81px;
+    height: 181px;
+    background-color: #236B8B;
+    border-radius: 5px;
+    
+}
+
+.course .p1{
+    font-size: 20px;
+    font-weight: bold;
+    color: #E9F3F8;
+    margin-left: 4rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.course .p2{
+    font-size: 20px;
+    font-weight: normal;
+    color: #E9F3F8;
+    width: 69px;
+    height: 23px;
+    margin-left: 4rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.course img{
+    margin-left: 4rem;
+}
+
+.codelama{
+    width: 54px;
+    height: 43px;
+    margin-bottom: 1.25rem;
+    margin-top: 5.5rem;
+}
+
+.pzrlm{
+    width: 58px;
+    height: 58px;
+    margin-bottom: 0.6rem;
+    margin-top: 4.5rem;
+}
+
+.dill{
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1.3rem;
+    margin-top: 5.1rem;
+}
+
+.kisiselGlsm1{
+   width: 43px;
+   height: 47px;
+   margin-bottom: 1rem;
+   margin-top: 5.1rem;
+}
+
+.kisiselGlsm2{
+    width: 58px;
+   height: 58px;
+   margin-bottom: 0.5rem;
+   margin-top: 4.5rem;
+}
+/*Liste Part Finish*/
+
+
+
+/*Section Eğitim Finish*/
+
+
+
+/*Section Why Gyoder Part Start*/
+.why-gyoder{
+    position: relative;
+    width: 100%;
+    background-color: #236B8B;
+    height: 923px;
+}
+
+.whyGImg{
+    background-color: #236B8B;
+    width: 1880px;
+    height: 923px; 
+    background-size: cover;
+    opacity: 0.8;
+}
+.text-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+   
+    z-index: 1;
+}
+
+.ndnG{
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+   color:#E9F3F8 ; 
+   font-weight: lighter;
+   margin-top: -36rem;
+}
+
+.text-overlay span{
+    font-size: 36px;
+    font-weight:700;
+    color:#E9F3F8 ; 
+ }
+
+ .whyGyoder-wrt{
+    background-color: #143C4E;
+    width: 1478px;
+    height: 580px;
+    transform: translate(-50%, -50%);
+    margin-top: 33.5rem;
+    border-radius: 5px;
+    opacity: 0.6;
+ } 
+
+ .opacty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 10; 
+    width: 1478px;
+    height: 580px;
+    margin-top: -58rem;
+    color:#E9F3F8 ;
+
+    gap: 5rem;
+ }
+
+ .prt1{
+    color:#E9F3F8 ; 
+    width: 383.37px;
+    height: 456px;
+ }
+
+ .wrt-1,  .wrt-2, .wrt-3 , .wrt-4 , .wrt-5 , .wrt-6{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+ }
+
+ .wrt-4 , .wrt-5 , .wrt-6{
+    margin-bottom: 5.7rem;
+ }
+
+ .wrt-5{
+    margin-top: -2rem;
+ }
+
+ .wrt-6{
+    margin-top: 7.4rem;
+ }
+
+.wrt-1 p{
+    font-size: 22px;
+    font-weight: normal;
+    font-family: 'Raleway', sans-serif;
+ }
+
+ .wrt-1 img{
+   margin-top: -8.7rem;
+ } 
+
+ .wrt-2 p{
+    font-size: 21.89px;
+    font-weight: normal;
+    font-family: 'Raleway', sans-serif;
+ }
+
+ .wrt-2 img{
+   margin-top: -7rem;
+ }
+ 
+ .wrt-3 p{
+    font-size: 21.89px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .wrt-3 img{
+   margin-top: -8rem;
+ } 
+
+
+
+ .prt2{
+    color:#E9F3F8 ; 
+    width: 381px;
+    height: 473px;
+   
+ }
+
+ .wrt-4 p{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .wrt-4 img{
+   margin-top: -7rem;
+ } 
+
+ .wrt-5 p{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .wrt-5 img{
+   margin-top: -1.9rem;
+ } 
+
+ .wrt-6 p{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .wrt-6 img{
+   margin-top: -9.7rem;
+ }
+
+
+ .prt3{
+    color:#E9F3F8 ; 
+    width: 381px;
+    height: 473px;
+ }
+
+
+
+/*Section Why Gyoder Part Finish*/
+
+
+
+/*Section HAberlerden HaberDAR OL start*/
+.newsletter{
+    height: 610px;
+    background-color: #E9F3F8;
+    padding: 3rem 0rem;
+}
+
+.email-submit{
+    margin-left: 55.7rem;
+    margin-top: 9rem;
+}
+
+.email-submit h2{
+    font-weight: bold;
+    font-size: 48px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--black-color);
+}
+
+.email-submit p{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    color: #174052;
+    margin-left: 19.8rem;
+    margin-top: 2rem;
+}
+
+/*Plane image start*/
+.plane{
+    margin-left: 79rem;
+    margin-top: 9rem;
+}
+
+.planeBack{
+   margin-bottom: -4.3rem;
+   margin-right: -2.15rem;
+}
+
+.planePrt2{
+    margin-bottom: 1.3rem;
+   margin-left: -7.8rem;
+}
+
+.planePrt3{
+    margin-bottom: 1.3rem;
+   margin-left: -6.35rem;
+}
+
+.planeShadow{
+    margin-bottom: -5.8rem;
+    margin-left: -2.5rem;
+}
+/*Plane image finish*/
+
+/*form start*/
+.email-submit form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background-color: #ffffff;
+    width: 660px;
+    height: 60px;
+    margin-top: 4rem;
+    margin-left: 7.1rem;
+    padding: 0px 1px;
+    border: 1px solid #E2E9F3; /* Kenarlığın kalınlığı ve rengi */
+    box-sizing: border-box; /* Kenarlığın iç kenardan itibaren uygulanmasını sağlar */
+}
+
+.mektpFrm{
+    display: flex;
+    align-items: center;
+  
+}
+
+.mektpFrm img{
+    margin-right: -19.8rem;
+    margin-top: -0.02;
+}
+
+.mektpFrm p{
+    
+    font-size: 2.5rem;
+    margin-top: -0.215rem;
+    padding: 0rem 1rem;
+   opacity: 0.1;
+}
+
+.email-submit input{
+   padding-right: 31rem;
+   margin-top: 0.2rem;
+}
+
+.email-submit input::placeholder{
+    color: #A9B6CC;
+}
+
+.email-submit button{
+    margin-right: 2rem;
+    background-color: #ffffff;
+    margin-top: 0.55rem;
+}
+
+/*Form finish*/
+
+
+/*Section HAberlerden HaberDAR OL start*/
+
+
+
+/*main finish*/
+
+
+
+/*footer start*/
+
+footer{
+    background: linear-gradient(to right, #236B8B 0%, #509BBC 100%);
+    height: 774px;
+}
+
+.contact-info{
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+   padding: 9.7rem 7.5rem;
+   
+}
+
+.footerSol{
+    margin-left: 8.1rem;
+    
+}
+
+.logoFooter{
+   width: 258px;
+   height: 39.57px;
+  margin-bottom: 1.9rem;
+}
+
+.bizeUlasin{
+    font-size: 32px;
+    font-weight: 540;
+    margin-bottom: 1.9rem;
+}
+
+.knmmmm{
+    height: 29.09px;
+}
+
+.contact-info{
+    display: flex;
+    align-items: center;
+    gap: 27rem;
+}
+
+
+
+.FooterInfoP1{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.tel-gmail p{ 
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+
+}
+
+.mail{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tell{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.konumF{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 259px;
+    height: 57px;
+    margin-top: -2.7rem;
+    margin-left: 2rem;
+}
+
+.konumF p{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.konumF img{
+    margin-top: -2.8rem;
+}
+
+.fMapp{
+    width: 465px;
+    height: 240px;
+    margin-top: 1rem;
+}
+
+
+.footerSag{
+   display: flex;
+   align-items: center;
+   margin-top: -12rem;
+  
+}
+
+.footerSag p{
+    font-size: 16.5px;
+    font-family: 'Raleway',sans-serif;
+    margin: 0.9rem 0rem;
+}
+
+.footerSag h2{
+    font-size: 16.5px;
+    font-family: 'Raleway',sans-serif;
+    margin-top: 4.4rem;
+}
+
+.kurumsal-uyelik{
+    margin-top: 1.4rem;
+}
+
+.etkinlik-yayinlar{
+    margin-right: 9rem;
+}
+
+.yayn{
+    width: 210px;
+    height: 138.97px;
+
+}
+
+.uyelikk{
+   margin-bottom: -0.8rem;
+}
+
+.akademii{
+    width: 190px;
+    margin-top: -22.9rem;
+  margin-left: 2.3rem;
+}
+
+.krmsl{
+    width: 200px;
+}
+
+.custom-divider {
+    border-top: 2px solid #E2E9F3; /* Çizginin rengini ve kalınlığını ayarlayın */
+    margin: 0rem 15.55rem; /* Üst ve alt boşlukları ayarlayın */
+    margin-top: -6rem;
+}
+
+.social-media{
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.gzlk{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/*footer finish*/
+
+
+
+
+
+
+/* Responsive Tasarım */
+
+:root{
+    --darkGreen-color: #1F5D78;
+    --lightGreen-color: #6EC3E9;
+    --black-color: #212225;
+    --border: 0.1rem solid rgba(255,255,255,0.4);
+    --body-darkMode-color: #2d2d2d; 
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+   
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    margin: 0;   /**Sistemi resetlemek için boşluk kalmasın diye yatayda ve dikeyde margin ve padding*/
+    padding: 0; /**Sistemi resetlemek için*/
+    box-sizing: border-box; /**kutularımızı belirli bir kalıba kaymak için*/
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: 0.2 ease;
+}
+
+
+/*! base HTML codes */
+
+html{
+    font-size: 62.5%; /*1 rem normalde 16 px iken bu kod ile 1 rem 10 px olur*/
+    overflow-x: hidden; /* yatay scroll u gizlemek için*/ 
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+    color: black;
+   
+}
+
+/*header start*/
+
+
+header {
+    width: 100%;
+    position: relative; /* İsteğe bağlı: pozisyonlandırma için */
+    display: flex; /* Flexbox kullanarak yatay hizalama */
+    align-items: center; /* Dikey olarak ortalama */
+    justify-content: space-between; /* Alanı eşit şekilde dağıtma */
+   height: 78px;
+}
+
+/*Logo Start*/
+.logo img{
+    width: 200px;
+    height: 32.64px;
+    margin-left: 189px;
+  
+    
+}
+/*Logo Start*/
+
+/*nav start*/
+
+
+.separator {
+    color: #DFECF3; /* Ayarlamak istediğin renk */
+    align-items: center; /* Dikey olarak ortalama */
+    height: 25px;
+    font-weight: lighter;
+}
+
+.navbar{
+    flex-grow: 1;
+    width: 100%; /* Ekranın tamamını kaplar */
+    margin-left: 0;
+    padding-left: 10rem;
+    text-align: right;
+}
+
+.navbar ul {
+    list-style: none; /* İşaretleri kaldırır */
+    padding: 0; /* Varsayılan padding'i sıfırlar */
+    margin: 0; /* Varsayılan margin'i sıfırlar */
+    display: flex; /* Yatay hizalamak için flexbox kullanır */
+    justify-content: flex-end;
+    align-items: center; /* Dikey olarak ortalama */
+}
+.navbar ul li {
+    margin: 0 15px; /* Elemanlar arasında yatay boşluk bırakır */
+    /*margin-right: 10px; */ /* Her bir menü öğesi arasına boşluk ekler */
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    padding: 10px; /* İç boşluk */
+    transition: background-color 0.1s; /* Geçiş efekti */
+    border: none; /* Varsayılan border'ı kaldırır */
+}
+
+
+
+nav ul li:nth-child(1) a,  /*Hakkımızda*/
+nav ul li:nth-child(2) a,  /*Sektör Bilgisi*/
+nav ul li:nth-child(3) a,  /*Kurumsal*/
+nav ul li:nth-child(4) a  /*Basın Odası*/
+  { 
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--darkGreen-color);
+}
+
+nav ul li:nth-child(5) a, /* Portal Girişi */
+nav ul li:nth-child(6) a { /* Portale Üye Ol */
+    border: 1px solid var(--darkGreen-color); /* Oval şeklide border */
+    border-radius: 44px; /* Border köşeleri oval yapmak için */
+    padding: 10px 20px; /* İç boşluk */
+    background-color: transparent; /* Arka plan rengi */
+    margin-right: 5px; /* Sağ tarafta boşluk */
+    height: 44px;
+    width: 155px;
+}
+
+nav ul li:nth-child(5) a{/* Portal Girişi */
+   
+   font-weight: 500;
+    font-size: 16px;
+    color: var(--darkGreen-color);
+}
+
+nav ul li:nth-child(6) a{/* Portale Üye Ol */
+    font-weight: 500;
+    font-size: 16px;
+    color: #FBFCFE;
+    background-color: var(--darkGreen-color);
+    padding: 12px 25px; /* İç boşluk */
+}
+
+nav ul li:nth-child(7) a{/* Bize Ulaşın */
+   font-weight: bold;
+   font-size: 16px;
+   color: var(--darkGreen-color);
+}
+
+ nav ul li:nth-child(8) { /*TR*/
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--darkGreen-color);
+    margin-right: 193px;
+
+ }
+
+ nav ul li:nth-child(8), /*TR*/
+ nav ul li:nth-child(5) a, /* Portal Girişi */
+ nav ul li:nth-child(7) a{ /*resim - yazı hizalama*/
+    display: flex; /* Flexbox kullanarak hizalama */
+    align-items: center; /* Dikey olarak ortala */
+ }
+
+.navbar li img,
+ .navbar li a img {
+    width: 20px; /* İkon boyutu */
+    height: 20px; /* İkon boyutu */
+    margin-right: 5px; /* Metin ile ikon arasındaki boşluk */
+}
+
+
+/*nav finish*/
+
+/*header finish*/
+
+/*main start*/
+
+
+/*slider start*/
+
+
+main {
+ 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+
+    width: 100%;
+    height: 50vw; /* 644px yükseklik yerine ekran genişliğinin %50'si kadar yükseklik */
+    max-height: 644px; /* Maksimum yükseklik sınırı */
+    overflow: hidden;
+    display: flex;
+}
+
+main .slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background: linear-gradient(to left, #D0DBE7 100%, #C2CEDF 0%);
+    /*background-color: #ccc;  */
+   
+    height: 644px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.text-content {
+    margin-bottom: 1.5rem;
+   margin-left: 20rem;
+    color: var(--black-color);
+    max-width: 50%; /* Metin içeriğinin maksimum genişliği */
+    padding-right: 20px; /* Resim ile metin arasındaki boşluk */
+}
+
+.text-content .sliderSentence1{
+    width: 723px;
+    height: 117px;
+    font-size: 48px;
+    font-weight: lighter;
+}
+
+.text-content .sliderSentence1Str{
+    height: 117px;
+    width: 723px;
+    font-size: 48px;
+}
+
+.text-content .sliderSentence1Prg{
+    padding-top: 2.5rem;
+    width: 555px;
+    height: 72px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.text-content .dvmt{
+    padding-top: 4.5rem;
+    width: 555px;
+    height: 25px;
+    color: var(--darkGreen-color);
+    font-weight: bold;
+    font-size: 20px;
+   
+}
+
+
+.u{
+   
+    border-bottom: 2px solid var(--darkGreen-color);
+}
+
+main .slide .sliderImg1{
+  
+    display: grid;
+    height: 675px;
+   
+    justify-content:right;
+    margin-left: -230px;
+    
+}
+
+/* Slider İçin Butonlar */
+.slider-btn {
+    margin: 0 53.1px;
+    position: absolute;
+    top: 41%;
+    transform: translateY(-50%);
+    width: 54px; /* Buton boyutu */
+    height: 54px;
+    border-radius: 50%; /* Yuvarlak buton */
+    background-color: #FBFCFE;
+    opacity: 0.5;
+    color:var(--black-color); /* Buton üzerindeki yazı rengi */
+    border: none; /* Kenarlık kaldırma */
+    font-size: 15px; /* Yazı boyutu */
+    cursor: pointer; /* İşaretçi */
+    display: flex; /* İçerik hizalama */
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Butonların slider içeriklerinin üzerinde olması için */
+}
+
+/* Önceki Buton */
+.prev-btn {
+    left: 10px; /* Sol kenardan uzaklık */
+}
+
+/* Sonraki Buton */
+.next-btn {
+    right: 10px; /* Sağ kenardan uzaklık */
+    z-index: 1000;
+}
+
+
+
+/*slider finish*/
+
+
+
+/*GYODER Button Part Start*/
+
+.gyoder-projects {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: -59px;
+    
+}
+
+.project-list {
+ 
+    display: flex; /* Flexbox kullanımı */
+    justify-content: center; /* Yatay ortalama */
+    gap: 70px; /* Butonlar arasında boşluk */
+    flex-wrap: wrap; /* Ekran küçüldüğünde butonlar alt alta dizilir */
+   
+}
+
+
+.project {
+    display: flex; /* Elemanları yan yana yerleştirir */
+    align-items: center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    text-align: center; /* Metni ortalar */
+    width: 289.52px;
+    height: 72.26px;
+    padding: 10px 20px; /* İç boşluk ayarları */
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: #0e0e0e; /* Arka plan rengi */
+    color: white; /* Metin rengi */
+    border-radius: 69px; /* Köşe yuvarlama */
+    border: none; /* Kenarlık yok */
+    font-weight: bold;
+    font-size: 20px; /* Yazı boyutu */
+    cursor: pointer; /* Fare imlecini el yapar */
+}
+
+.gAkademi{
+    display: flex; /* Elemanları yan yana yerleştirir */
+    align-items: center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    background-color: var(--darkGreen-color);
+}
+
+.gGosterge{
+    color: var(--darkGreen-color);
+    background-color: var(--lightGreen-color);
+}
+
+.gProjeler{
+    color: #ffffff;
+    background-color: var(--black-color);
+}
+
+.gEtkinlikler{
+    
+    color: var(--darkGreen-color);
+    background-color: #E9F3F8;
+}
+
+.project .a{/*GYODER Akademi*/
+   width: 37.73px; 
+   height: 38.13px;
+}
+
+.project .g{/*GYODER Gösterge*/
+    width: 35.72px; 
+    height: 32.69px;
+ }
+
+ .project .p{/* GYODER Projeler*/
+    width: 44px; 
+    height: 40px;
+ }
+
+ .project .e{/* GYODER Etkinlikler*/
+    width: 38px; 
+    height: 39px;
+ }
+
+.project .a, /*GYODER Akademi*/
+.project .g, /*GYODER Gösterge*/
+.project .p, /* GYODER Projeler*/
+.project .e /*GYODER Etkinlikler*/
+{
+
+    margin-right: 8px; /* Metin ile ikon arasındaki boşluk */
+}
+
+/*GYODER Button Part Start*/
+
+
+
+/*Vizyonumuz - Misyonumuz Part Start*/
+
+.about{
+    
+    display: flex;
+    background-color: rgba(35, 107, 139, 0.05);
+    padding-left: 183px;
+    margin-right: 7%;
+    margin-top: 1.4rem;
+   gap: 10rem;
+   border-radius: 5px;
+   height: 307px;
+}
+
+
+.mission{
+    margin-top: 5.5rem;
+    margin-right: 211px;
+}
+
+.vision{
+    margin-top: 6rem;
+}
+
+
+
+
+.mission h2, .vision h2{
+    display: flex; /* Flexbox kullan */
+    align-items: center; /* Dikey olarak ortala */
+    color: var(--black-color);
+    font-weight: bold;
+    font-size: 36px;
+   text-transform: none; /* Metnin baş harflerini büyük yapmaz */
+ 
+}
+
+.mission img{
+    margin-right: 1.5rem;
+    width: 70px;
+    height: 70px;
+}
+
+.vision img{
+    margin-right: 1.5rem;
+    width: 61.08px;
+    height: 64px;
+}
+
+
+ .mission p, .vision p{
+      display: inline-block;
+    color: var(--black-color);
+    margin-top: 2rem;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: none; /* Metnin baş harflerini büyük yapmaz */
+  
+}
+
+.mission p{
+    width: 587px;
+    height: 144px;
+}
+
+.vision p{
+    width: 573px;
+    height: 120px;
+}
+/*Vizyonumuz - Misyonumuz Part Finish*/
+
+
+
+/*Section event  Etkinlik Takvimi start*/
+
+.event-calendar{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Yatayda ortala */
+    margin-top: 8rem;
+    height: 87px;
+    background: linear-gradient(to right, #1F5D78 0% ,  #4F9ABB 100%) ;
+}
+
+.event-calendar h2{
+    color: #E9F3F8;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 1rem;
+}
+
+.event-calendar img{
+    width: 38.57px;
+    height: 39px;
+    
+    margin-top: -0.5rem;
+    margin-right: 1.5rem;
+}
+
+.event-list{
+    background-color: #DFECF3 ;
+    height: 749px;
+}
+
+
+/*Buton part start*/
+.eventCalendarBtn ul{
+    display: flex; /* Öğeleri yatay hizalar */
+    align-items: center;
+    justify-content: center;
+    list-style-type: none; /* Varsayılan liste işaretlerini kaldırır */
+    padding: 0; /* Varsayılan padding'i kaldırır */
+    margin: 0; /* Varsayılan margin'i kaldırır */
+    margin-left: 25rem;
+  
+}
+
+.eventCalendarBtn li{
+    margin-top: 5rem;
+    margin-right: 28px; /* Öğeler arasına boşluk ekler */
+}
+.eventCalendarBtn li.tmnG{
+    display: flex;
+    font-size: 20px;
+    width: 138.9px;
+    height: 24px;
+    margin-left: 5.5rem;
+    color: var(--darkGreen-color) ; 
+    border-bottom: 1.6px solid var(--darkGreen-color);
+}
+
+.eventCalendarBtn li a{
+    display: flex;
+    width: 218.36px;
+    height: 55.3px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 75px;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    padding: 10px 20px; /* İç boşluk ekler */
+    border: 2px solid #6EC3E9; /* Kenarlık rengi */
+   
+    color: var(--darkGreen-color); /* Metin rengi */
+}
+
+.eventCalendarBtn li.active a {
+   
+    background-color: #6EC3E9; /* Aktif öğe arka plan rengi */
+    color: #ffffff; /* Aktif öğe metin rengi */
+}
+
+
+/*Buton part finish*/
+
+
+
+/*Etkinlik Event Posters start*/
+
+.eventPoster{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.event {
+   
+    width: 457.61px;
+    height: 498px;
+   background-color: #E9F3F8;
+   margin-top: 4.6rem;
+   margin-right: 3rem;
+}
+
+.event img{
+    margin-top: 3.4rem;
+    width: 377px;
+    height: 322px;
+}
+
+.imgPoster{
+    
+    display: flex;
+   
+    justify-content: center;
+}
+
+.event p, .event ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.writePoster{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3.65rem;
+    gap: 2rem;
+    margin-top: 1.8rem;
+}
+
+.date{
+    width: 103px;
+    height: 24px;
+    font-weight:500;
+    font-size: 20px;
+    color: var(--darkGreen-color);
+}
+
+.dayTime{
+    width: 114px;
+    height: 17px;
+    font-weight: bold;
+    font-size: 14.6px;
+    color: #6EC3E9;
+    margin-top: 0.35rem;
+}
+
+.eventInfo{
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--black-color);
+}
+
+.event ul{
+    display: flex; /* Öğeleri yatay hizalar */
+    align-items: center;
+    justify-content: center;
+    list-style-type: none; /* Varsayılan liste işaretlerini kaldırır */
+    padding: 0; /* Varsayılan padding'i kaldırır */
+    margin: 0; /* Varsayılan margin'i kaldırır */
+    margin-left: 1.5rem;
+    
+}
+
+.event ul li{
+    margin-top: 1.2rem;
+    margin-right: 28px; /* Öğeler arasına boşluk ekler */
+    border-radius: 42px;
+} 
+
+.event ul li a{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    padding: 10px 20px; /* İç boşluk ekler */ 
+}
+
+.infoBtn{
+    width: 200px;
+    height: 40px;
+  border: 0.75px solid #6EC3E9;
+}
+
+.infoBtn a{
+    color: #6EC3E9;
+}
+
+.kayitBtn{
+    width: 150px;
+    height: 40px;
+    color: #ffffff;
+    background-color: var(--darkGreen-color);
+}
+
+.kayitBtn a{
+ color: #ffffff;
+}
+
+/*Etkinlik Event Posters finish*/
+
+
+
+/*Section event  Etkinlik Takvimi finish*/
+
+
+
+/*Section Eğitim Start*/
+.educationTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Yatayda ortala */
+
+    height: 87px;
+    background: linear-gradient(to right, #1F5D78 0% ,  #4F9ABB 100%) ;
+}
+
+.educationTitle h2{
+    color: #E9F3F8;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 1rem;
+}
+
+.educationTitle img{
+    width: 37.73px;
+    height: 38.13px;
+    
+    margin-top: 0.5rem;
+    margin-right: 1.5rem;
+}
+
+
+
+/*Liste Part Start*/
+.education-list{
+    background-color: #E9F3F8;
+    padding: 2rem 0rem;
+    height: 37rem;
+}
+
+.educationWrt{
+    display: flex;
+    align-items: center;
+    margin-left: 21rem;
+    padding: 2rem 0rem;
+}
+
+.educationWrt img{
+    width: 20px;
+    height: 24.6px;
+    margin-right: 1rem ;
+}
+
+.educationWrt p{
+    margin-top: 0.35rem;
+   font-weight: bold;
+   font-size: 20px;
+   color: #236B8B;
+    
+}
+
+.course-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.22rem;
+    margin-top: 1rem;
+}
+
+.course{
+    width: 259.81px;
+    height: 181px;
+    background-color: #236B8B;
+    border-radius: 5px;
+    
+}
+
+.course .p1{
+    font-size: 20px;
+    font-weight: bold;
+    color: #E9F3F8;
+    margin-left: 4rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.course .p2{
+    font-size: 20px;
+    font-weight: normal;
+    color: #E9F3F8;
+    width: 69px;
+    height: 23px;
+    margin-left: 4rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.course img{
+    margin-left: 4rem;
+}
+
+.codelama{
+    width: 54px;
+    height: 43px;
+    margin-bottom: 1.25rem;
+    margin-top: 5.5rem;
+}
+
+.pzrlm{
+    width: 58px;
+    height: 58px;
+    margin-bottom: 0.6rem;
+    margin-top: 4.5rem;
+}
+
+.dill{
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1.3rem;
+    margin-top: 5.1rem;
+}
+
+.kisiselGlsm1{
+   width: 43px;
+   height: 47px;
+   margin-bottom: 1rem;
+   margin-top: 5.1rem;
+}
+
+.kisiselGlsm2{
+    width: 58px;
+   height: 58px;
+   margin-bottom: 0.5rem;
+   margin-top: 4.5rem;
+}
+/*Liste Part Finish*/
+
+
+
+/*Section Eğitim Finish*/
+
+
+
+/*Section Why Gyoder Part Start*/
+.why-gyoder{
+    position: relative;
+    width: 100%;
+    background-color: #236B8B;
+    height: 923px;
+    
+}
+
+.why-gyoder p{
+   text-align: justify;
+}
+
+.whyGImg{
+    background-color: #236B8B;
+    width: 1880px;
+    height: 923px; 
+    background-size: cover;
+    opacity: 0.8;
+}
+.text-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+   
+    z-index: 1;
+}
+
+.ndnG{
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+   color:#E9F3F8 ; 
+   font-weight: lighter;
+   margin-top: -36rem;
+}
+
+.text-overlay span{
+    font-size: 36px;
+    font-weight:700;
+    color:#E9F3F8 ; 
+ }
+
+ .whyGyoder-wrt{
+    background-color: #143C4E;
+    width: 1478px;
+    height: 580px;
+    transform: translate(-50%, -50%);
+    margin-top: 33.5rem;
+    border-radius: 5px;
+    opacity: 0.6;
+ } 
+
+ .opacty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 10; 
+    width: 1478px;
+    height: 580px;
+    margin-top: -58rem;
+    color:#E9F3F8 ;
+
+    gap: 5rem;
+ }
+
+ .prt1{
+    color:#E9F3F8 ; 
+    width: 383.37px;
+    height: 456px;
+ }
+
+ .wrt-1,  .wrt-2, .wrt-3 , .wrt-4 , .wrt-5 , .wrt-6{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+ }
+
+ .wrt-4 , .wrt-5 , .wrt-6{
+    margin-bottom: 5.7rem;
+ }
+
+ .wrt-5{
+    margin-top: -2rem;
+ }
+
+ .wrt-6{
+    margin-top: 7.4rem;
+ }
+
+.wrt-1 p{
+    font-size: 22px;
+    font-weight: normal;
+    font-family: 'Raleway', sans-serif;
+ }
+
+ .wrt-1 img{
+   margin-top: -8.7rem;
+ } 
+
+ .wrt-2 p{
+    font-size: 21.89px;
+    font-weight: normal;
+    font-family: 'Raleway', sans-serif;
+ }
+
+ .wrt-2 img{
+   margin-top: -7rem;
+ }
+ 
+ .wrt-3 p{
+    font-size: 21.89px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .wrt-3 img{
+   margin-top: -8rem;
+ } 
+
+
+
+ .prt2{
+    color:#E9F3F8 ; 
+    width: 381px;
+    height: 473px;
+   
+ }
+
+ .wrt-4 p{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .wrt-4 img{
+   margin-top: -7rem;
+ } 
+
+ .wrt-5 p{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .wrt-5 img{
+   margin-top: -1.9rem;
+ } 
+
+ .wrt-6 p{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .wrt-6 img{
+   margin-top: -9.7rem;
+ }
+
+
+ .prt3{
+    color:#E9F3F8 ; 
+    width: 381px;
+    height: 473px;
+ }
+
+
+
+/*Section Why Gyoder Part Finish*/
+
+
+
+/*Section HAberlerden HaberDAR OL start*/
+.newsletter{
+    height: 610px;
+    background-color: #E9F3F8;
+    padding: 3rem 0rem;
+}
+
+.email-submit{
+    margin-left: 55.7rem;
+    margin-top: 9rem;
+}
+
+.email-submit h2{
+    font-weight: bold;
+    font-size: 48px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--black-color);
+}
+
+.email-submit p{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    color: #174052;
+    margin-left: 19.8rem;
+    margin-top: 2rem;
+}
+
+/*Plane image start*/
+.plane{
+    margin-left: 79rem;
+    margin-top: 9rem;
+}
+
+.planeBack{
+   margin-bottom: -4.3rem;
+   margin-right: -2.15rem;
+}
+
+.planePrt2{
+    margin-bottom: 1.3rem;
+   margin-left: -7.8rem;
+}
+
+.planePrt3{
+    margin-bottom: 1.3rem;
+   margin-left: -6.35rem;
+}
+
+.planeShadow{
+    margin-bottom: -5.8rem;
+    margin-left: -2.5rem;
+}
+/*Plane image finish*/
+
+/*form start*/
+.email-submit form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background-color: #ffffff;
+    width: 660px;
+    height: 60px;
+    margin-top: 4rem;
+    margin-left: 7.1rem;
+    padding: 0px 1px;
+    border: 1px solid #E2E9F3; /* Kenarlığın kalınlığı ve rengi */
+    box-sizing: border-box; /* Kenarlığın iç kenardan itibaren uygulanmasını sağlar */
+}
+
+.mektpFrm{
+    display: flex;
+    align-items: center;
+  
+}
+
+.mektpFrm img{
+    margin-right: -19.8rem;
+    margin-top: -0.02;
+}
+
+.mektpFrm p{
+    
+    font-size: 2.5rem;
+    margin-top: -0.215rem;
+    padding: 0rem 1rem;
+   opacity: 0.1;
+}
+
+.email-submit input{
+   padding-right: 31rem;
+   margin-top: 0.2rem;
+}
+
+.email-submit input::placeholder{
+    color: #A9B6CC;
+}
+
+.email-submit button{
+    margin-right: 2rem;
+    background-color: #ffffff;
+    margin-top: 0.55rem;
+}
+
+/*Form finish*/
+
+
+/*Section HAberlerden HaberDAR OL start*/
+
+
+
+/*main finish*/
+
+
+
+/*footer start*/
+
+footer{
+    background: linear-gradient(to right, #236B8B 0%, #509BBC 100%);
+    height: 774px;
+}
+
+.contact-info{
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+   padding: 9.7rem 7.5rem;
+   
+}
+
+.footerSol{
+    margin-left: 8.1rem;
+    
+}
+
+.logoFooter{
+   width: 258px;
+   height: 39.57px;
+  margin-bottom: 1.9rem;
+}
+
+.bizeUlasin{
+    font-size: 32px;
+    font-weight: 540;
+    margin-bottom: 1.9rem;
+}
+
+.knmmmm{
+    height: 29.09px;
+}
+
+.contact-info{
+    display: flex;
+    align-items: center;
+    gap: 27rem;
+}
+
+
+
+.FooterInfoP1{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.tel-gmail p{ 
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+
+}
+
+.mail{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tell{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.konumF{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 259px;
+    height: 57px;
+    margin-top: -2.7rem;
+    margin-left: 2rem;
+}
+
+.konumF p{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.konumF img{
+    margin-top: -2.8rem;
+}
+
+.fMapp{
+    width: 465px;
+    height: 240px;
+    margin-top: 1rem;
+}
+
+
+.footerSag{
+   display: flex;
+   align-items: center;
+   margin-top: -12rem;
+  
+}
+
+.footerSag p{
+    font-size: 16.5px;
+    font-family: 'Raleway',sans-serif;
+    margin: 0.9rem 0rem;
+}
+
+.footerSag h2{
+    font-size: 16.5px;
+    font-family: 'Raleway',sans-serif;
+    margin-top: 4.4rem;
+}
+
+.kurumsal-uyelik{
+    margin-top: 1.4rem;
+}
+
+.etkinlik-yayinlar{
+    margin-right: 9rem;
+}
+
+.yayn{
+    width: 210px;
+    height: 138.97px;
+
+}
+
+.uyelikk{
+   margin-bottom: -0.8rem;
+}
+
+.akademii{
+    width: 190px;
+    margin-top: -22.9rem;
+  margin-left: 2.3rem;
+}
+
+.krmsl{
+    width: 200px;
+}
+
+.custom-divider {
+    border-top: 2px solid #E2E9F3; /* Çizginin rengini ve kalınlığını ayarlayın */
+    margin: 0rem 15.55rem; /* Üst ve alt boşlukları ayarlayın */
+    margin-top: -6rem;
+}
+
+.social-media{
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.gzlk{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+/*footer finish*/
+
+
+/*Responsive tasarım start*/
+@media (max-width:768px){
+    html{
+        font-size: 30%;  
+      } 
+
+    header {
+        flex-direction:row;
+       width: 20%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    }      
+
+
+/*Responsive tasarım finish*/
