@@ -1,0 +1,48 @@
+.navbar{
+   padding: 1rem 16rem !important;
+}
+
+.nvbr{
+    padding: 0rem 5rem;
+}
+
+/*slider*/
+.carousel-control-next-icon{
+    border-radius: 46px !important;
+   background-color: gray;
+    
+}
+
+.carousel-inner{
+    z-index: -1000 !important;
+}
+
+/*slider*/
+
+/*slider down*/
+.btn{
+    margin-top: -2rem !important;
+    font-size: 30px !important;
+    padding: 1rem 2rem !important;
+    border-radius: 45px !important;
+    justify-content: center !important;
+    
+}
+
+.project-list{
+    z-index: 1000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+       
+}
+.btn-lg,
+.btn-primary{
+    margin-left: 2rem !important;
+}
+
+.project-list img{
+    padding-right: 0.5rem;
+}
+
+/*slider down*/

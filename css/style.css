@@ -56,6 +56,22 @@ body{
 
 /*header start*/
 
+.dropdown{
+    background-color: #ffffff !important;
+    position: fixed !important;
+    right: 0 !important;
+    display: none;
+}
+@media(max-width: 768px) {
+    .dropdown{
+        display: block !important;
+        position: fixed;
+        margin-right: 2rem;
+    }
+    .navbar{
+        display: none !important;
+    }
+}
 
 header {
     width: 100%;
